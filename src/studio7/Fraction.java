@@ -31,17 +31,23 @@ public class Fraction
 		return (new Fraction(this.denominator, this.numerator));
 	}
 	
-	public Fraction simplify()
+	//public Fraction simplify()
 	{
 		// did not finish b/c this just math, not learning about classes
-		if (this.numerator % this.denominator == 0)
+		//if (this.numerator % this.denominator == 0)
 		{
-			newNumerator = this.numerator/this.denominator;
+			//newNumerator = this.numerator/this.denominator;
 		}
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Fraction f1 = new Fraction(1, 2);
+		Fraction f2 = new Fraction(1, 4);
+		Fraction sum = f1.add(f2);
+		System.out.println(sum.numerator);
+		System.out.println(sum.denominator);
+		
 
 	}
 
