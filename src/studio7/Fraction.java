@@ -34,9 +34,9 @@ public class Fraction
 	//public Fraction simplify()
 	{
 		// did not finish b/c this just math, not learning about classes
-		//if (this.numerator % this.denominator == 0)
+		if (this.numerator % this.denominator == 0)
 		{
-			//newNumerator = this.numerator/this.denominator;
+			newNumerator = this.numerator/this.denominator;
 		}
 	}
 
