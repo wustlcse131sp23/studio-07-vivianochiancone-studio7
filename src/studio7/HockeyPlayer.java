@@ -4,11 +4,16 @@ public class HockeyPlayer
 {
 	private String name;
 	private int jerseyNumber;
+	private boolean isRightHanded;
+	private int[] stats;
 	
-	public HockeyPlayer(String n, int jerseyNum, boolean isRightHanded)
+	//hockey player constructor
+	public HockeyPlayer(String n, int jerseyNum, boolean isRightHanded, int[] goalsPerGame)
 	{
 		this.name = n;
 		this.jerseyNumber = jerseyNum;
+		this.isRightHanded = isRightHanded;
+		this.stats = goalsPerGame;
 	}
 	
 	public String shootDirection()
@@ -35,14 +40,24 @@ public class HockeyPlayer
 		double randomNumber = Math.random();
 		if (randomNumber < 0.5)
 		{
-			return "right";
+			return "shoots right";
 		}
 		
 		else
 		{
-			return "left";
+			return "shoots left";
 		}
 
+	}
+	
+	public int[] getStats()
+	{
+		return this.stats;
+	}
+	
+	public void setStats(int[] stats)
+	{
+		this.stats = stats;
 	}
 
 	public static void main(String[] args) 
