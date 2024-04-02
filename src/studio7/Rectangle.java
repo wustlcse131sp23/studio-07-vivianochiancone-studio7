@@ -14,12 +14,12 @@ public class Rectangle
 		this.width = w;
 	}
 	
-	public double area()
+	public double area()		// we are not using public static bc static methods are used when a method does not need to be called on an instance of the class. Here, all of these methods must work on the Rectangle instances (objects) of the Rectangle class
 	{
 		return this.length*this.width;
 	}
 	
-	public double perimeter()
+	public double perimeter()   
 	{
 		return 2*(this.length + this.width);
 	}
