@@ -31,22 +31,39 @@ public class Fraction
 		return (new Fraction(this.denominator, this.numerator));
 	}
 	
-	//public Fraction simplify()
-	{
-		// did not finish b/c this just math, not learning about classes
-		if (this.numerator % this.denominator == 0)
-		{
-			newNumerator = this.numerator/this.denominator;
-		}
+//	// according to chatGPT, my simplify function would only work in some cases
+//	public Fraction simplify()
+//	{
+//		int smallerValue;
+//		if (this.numerator < this.denominator) {
+//			smallerValue = this.numerator;
+//		}
+//		else {
+//			smallerValue = this.denominator;
+//		}
+//		
+//		for (int i = smallerValue; i > 0; i--) {
+//			if ((this.numerator % i == 0) && (this.denominator % i == 0)) {
+//				this.numerator /= i;
+//				this.denominator /= i;
+//			}
+//		}
+//		return this;
+//	}
+	
+	public String toString() {
+		return "Fraction[numerator = " + numerator + ", denominator = " + denominator + "]";
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Fraction f1 = new Fraction(1, 2);
 		Fraction f2 = new Fraction(1, 4);
+		Fraction f3 = new Fraction(12, 8);
 		Fraction sum = f1.add(f2);
 		System.out.println(sum.numerator);
 		System.out.println(sum.denominator);
+		System.out.println(f1);
 		
 
 	}
